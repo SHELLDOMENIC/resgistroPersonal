@@ -21,7 +21,7 @@ public class Controlador {
         return null;
     }
 
-    public void Persona() {
+    public void Persona(IuVista obIuVista) {
         try {
             String Nombre;
             String Apellido;

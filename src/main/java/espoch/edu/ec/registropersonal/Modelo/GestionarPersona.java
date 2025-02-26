@@ -18,9 +18,9 @@ public class GestionarPersona {
          if(vectPersona == null){
              vectPersona[i] = new Persona() ;
              resultPersona = String.valueOf (objIuVista.getEdad());
-            // vectPersona[i].getNombre(objIuVista.setName(objIuVista));
-             //vectPersona[i].getApellido(objIuVista.setApellido);
-             //vectPersona[i].getEdad(objIuVista.setEdad);
+             vectPersona[i].getNombre(objIuVista.setNombre());
+             vectPersona[i].getApellido(objIuVista.setApellido());
+             vectPersona[i].getEdad(objIuVista.setEdad());
              break;
              
          }
