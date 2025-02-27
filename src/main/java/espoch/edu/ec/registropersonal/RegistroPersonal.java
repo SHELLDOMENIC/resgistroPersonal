@@ -12,6 +12,6 @@ public class RegistroPersonal {
 
     public static void main(String[] args) {
         IuVista objVista = new IuVista();
-        IuVista.setVisible(true);
+        objVista.setVisible(true);
     }
 }

@@ -1,4 +1,3 @@
-
 package espoch.edu.ec.registropersonal.Modelo;
 
 /**
@@ -6,6 +5,11 @@ package espoch.edu.ec.registropersonal.Modelo;
  * @author and_j
  */
 public class Persona {
+
+    static void add(Persona persona) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
     private String Nombre;
     private String Apellido;
     private int Edad;
@@ -40,7 +44,15 @@ public class Persona {
     }
 
     public void setEdad(int Edad) {
-        this.Edad = Edad;
+        if (Edad > 0) {
+            this.Edad = Edad;
+        } else {
+            System.out.println("Ingrese una edad positiva");
+        }
     }
-    
+
+    @Override
+    public String toString() {
+        return this.Nombre + "" + this.Apellido + "" + this.Edad + "";
+    }
 }
