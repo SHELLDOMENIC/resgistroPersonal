@@ -14,7 +14,7 @@ public class Controlador {
     private Persona objPersona;
     private GestionarPersona objGestionarPersona;
     private Controlador objControlador;
-    Persona[] vectPersona = new Persona[5];
+    Persona[] vectPersona = new Persona[15];
 
     public Controlador objControlador(IuVista objIuVista, GestionarPersona objGestionarPersona) {
         this.objIuVista = objIuVista;
@@ -30,7 +30,7 @@ public class Controlador {
         int Edad;
         String resultEdad;
         Edad = Integer.parseInt(objIuVista.getEdad());
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 15; i++) {
             if (vectPersona == null) {
                 vectPersona[i] = new Persona();
                 resultEdad = String.valueOf(objIuVista.getEdad());
@@ -39,12 +39,18 @@ public class Controlador {
                 vectPersona[i].getEdad();
                 break;
             }
-        } 
+        }
     }
-     public void mostrarPersona() {
-        objIuVista.setagregarPersona();
-         System.out.println("El personal Dministrado es el siguiente");
-         objControlador.setagregarPersona();
+
+    public String mostrarPersona() {
+        System.out.println("El personal administrado es el siguiente");
+        for (int i = 0; i < 15; i++) {
+            if (vectPersona[i] != null) {
+            String Nombre= vectPersona[i].getNombre();
+            String Apellido = vectPersona[i].getApellido();
+            int Edad = vectPersona[i].getEdad();
+            }
+        }
+        return toString();
     }
 }
- 

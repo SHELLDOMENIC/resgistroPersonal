@@ -1,4 +1,3 @@
-
 package espoch.edu.ec.registropersonal.vista;
 
 import espoch.edu.ec.registropersonal.Controlador.Controlador;
@@ -8,35 +7,40 @@ import espoch.edu.ec.registropersonal.Controlador.Controlador;
  * @author and_j
  */
 public class IuVista extends javax.swing.JFrame {
+
     private Controlador objControlador;
+
     /**
      * Creates new form IuVista
      */
     public IuVista() {
         initComponents();
-        Controlador objControlador= new Controlador();
+        Controlador objControlador = new Controlador();
     }
-    public String getNombre(){
-    return txtNombre.getText();
+
+    public String getNombre() {
+        return txtNombre.getText();
     }
-    public String getApellido(){
-    return txtApellido.getText();
+
+    public String getApellido() {
+        return txtApellido.getText();
     }
-    public String getEdad(){
-    return txtEdad.getText();
-    } 
-    
-    public void respuesta(String msm){
+
+    public String getEdad() {
+        return txtEdad.getText();
+    }
+
+    public void respuesta(String msm) {
         txtRespuesta.setText(msm);
     }
-        
-     
-    public void Limpiar(){
+
+    public void Limpiar() {
         txtRespuesta.setText("");
         txtEdad.setText("");
         txtApellido.setText("");
         txtNombre.setText("");
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -169,21 +173,20 @@ public class IuVista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-     objControlador.mostrarPersona();// TODO add your handling code here:
+        objControlador.setagregarPersona();// TODO add your handling code here:
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-    Limpiar();        // TODO add your handling code here:
+        Limpiar();        // TODO add your handling code here:
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
-    objControlador.mostrarPersona();            // TODO add your handling code here:
+        objControlador.mostrarPersona();                // TODO add your handling code here:
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     /**
      * @param args the command line arguments
      */
-  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;
